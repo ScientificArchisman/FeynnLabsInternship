@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>bb6d2e46447f4fb2bdd95963780ecab2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="cell markdown">
+<h1> <center> <font color='blue'> <b> EV Market Segmentation </b> </font> </center> </h1>
+<h2> <center> <font color='black'> <b> Archisman Chakraborti </b> </font> </center> </h2>
+<p>The dataset, available at the link below, contains details about
+various electric vehicles (EVs) available in the market. Here's a brief
+description based on our exploration:</p>
+<p><strong>Electric Car Data Description</strong>:</p>
+<ul>
+<li>The dataset comprises <strong>103 rows</strong> (vehicles) and
+<strong>12 columns</strong> (attributes/features).</li>
+<li>It encompasses a variety of electric vehicle models, along with
+their specifications and characteristics.</li>
+<li><strong>Key Attributes Include</strong>:
+<ul>
+<li><strong>Model</strong>: Name of the electric vehicle.</li>
+<li><strong>PriceEuro</strong>: Price of the vehicle in Euros.</li>
+<li><strong>Range</strong>: The maximum distance the vehicle can travel
+on a full charge (in kilometers).</li>
+<li><strong>Acceleration</strong>: Time taken to accelerate from 0 to
+100 km/h. and more ....</li>
+</ul></li>
+</ul>
+<p><a
+href="https://storage.googleapis.com/kagglesdsdata/datasets/2380314/4016136/ElectricCarData_Norm.csv?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20230921%2Fauto%2Fstorage%2Fgoog4_request&amp;X-Goog-Date=20230921T095806Z&amp;X-Goog-Expires=259200&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=93ea46896e4456a8127502d462aebe52f0938061d797bc284d93c41eb5848b03683471007273b69d9854750828b09f3630a94ccab38f1b51cf39f6eb5c6514ceafa29ac9965305ae224313dbb32239bf9e89c0def1711a50512ca58bd4dd696145dbd620fbb54853f1d5f7edf5a72d410717fd26c025218004a602e6cd32551cb4d725b486af0dfe30ae259b62d5a478b59cb8a695e8e1cbe0fe62fa57ed83333e00fdb8020a9c362b21181c55d41344fe72605c6040042db00f5976ccdd1568fd4221030e4c833dfdc730f540c954f418620c269e7e904f53f1638bd2066fbc16c8a0b0da9b65a5097ff9cc3817d813144a94b242ac568fd25d2276c639b8a0">Redirect
+to dataset in Google APIs</a></p>
+</div>
+<div class="cell code" data-execution_count="101">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.style.use([<span class="st">&quot;science&quot;</span>, <span class="st">&quot;notebook&quot;</span>, <span class="st">&quot;grid&quot;</span>])</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Print versions</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Numpy version:  </span><span class="sc">{</span>np<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Matplotlib Version </span><span class="sc">{</span>plt<span class="sc">.</span>matplotlib<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Seaborn version: </span><span class="sc">{</span>sns<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Pandas version: </span><span class="sc">{</span>pd<span class="sc">.</span>__version__<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Python version: </span><span class="sc">{</span>sys<span class="sc">.</span>version[:<span class="dv">7</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Numpy version:  1.24.3
+Matplotlib Version 3.7.2
+Seaborn version: 0.12.2
+Pandas version: 2.1.0
+Python version: 3.11.5 
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="38">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">&quot;https://storage.googleapis.com/kagglesdsdata/datasets/2380314/4016136/ElectricCarData_Norm.csv?X-Goog-Algorithm=GOOG4-RSA-SHA256&amp;X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com</span><span class="sc">%2F</span><span class="st">20230921</span><span class="sc">%2F</span><span class="st">auto</span><span class="sc">%2F</span><span class="st">storage</span><span class="sc">%2F</span><span class="st">goog4_request&amp;X-Goog-Date=20230921T084035Z&amp;X-Goog-Expires=259200&amp;X-Goog-SignedHeaders=host&amp;X-Goog-Signature=953fdfa5a658807ae3b4a0c6f65ae318f20bfa9814e3882d59ec5134d4d393759db3589062077cc560e22047a827298fd4a56f8576b410cf041e5ff3228a84aa2f89ddc58049e110c4bf73e9c1138b3031274e415ec13bcaaa021e9bc2fd90cba2da15ac92ba776fef50fe4d092d19ee4fdf4aea97d1919ef950e689790d7dbc0b2d57d8c53ae94aedcc580af9259a1613a89c94afcb18a2394520e680a51328ca447ccde170b1e2decb3bcb9278d40f8615953ccb131b09a21598368545d6213c2b1949275a617e5dcab46ce611628cd76e4f49fcafec2c5dbc577c9a52f7b7dde36c61f6b31c6107c6983a03808afec71eb46605292d58f9b809093df29f9f&quot;</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data.head(<span class="dv">2</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="38">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Accel</th>
+      <th>TopSpeed</th>
+      <th>Range</th>
+      <th>Efficiency</th>
+      <th>FastCharge</th>
+      <th>RapidCharge</th>
+      <th>PowerTrain</th>
+      <th>PlugType</th>
+      <th>BodyStyle</th>
+      <th>Segment</th>
+      <th>Seats</th>
+      <th>PriceEuro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Tesla</td>
+      <td>Model 3 Long Range Dual Motor</td>
+      <td>4.6 sec</td>
+      <td>233 km/h</td>
+      <td>450 km</td>
+      <td>161 Wh/km</td>
+      <td>940 km/h</td>
+      <td>Rapid charging possible</td>
+      <td>All Wheel Drive</td>
+      <td>Type 2 CCS</td>
+      <td>Sedan</td>
+      <td>D</td>
+      <td>5</td>
+      <td>55480</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Volkswagen</td>
+      <td>ID.3 Pure</td>
+      <td>10.0 sec</td>
+      <td>160 km/h</td>
+      <td>270 km</td>
+      <td>167 Wh/km</td>
+      <td>250 km/h</td>
+      <td>Rapid charging possible</td>
+      <td>Rear Wheel Drive</td>
+      <td>Type 2 CCS</td>
+      <td>Hatchback</td>
+      <td>C</td>
+      <td>5</td>
+      <td>30000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>The dataset contains information about various electric cars. Here
+are the columns and a brief description of each:</p>
+<ol>
+<li><strong>Brand</strong>: Brand of the car.</li>
+<li><strong>Model</strong>: Model name of the car.</li>
+<li><strong>Accel</strong>: Acceleration (time taken to go from 0 to 100
+km/h).</li>
+<li><strong>TopSpeed</strong>: Maximum speed the car can achieve.</li>
+<li><strong>Range</strong>: Distance the car can travel on a full
+charge.</li>
+<li><strong>Efficiency</strong>: Energy consumption per kilometer.</li>
+<li><strong>FastCharge</strong>: Charging speed when using a fast
+charger.</li>
+<li><strong>RapidCharge</strong>: Indicates if rapid charging is
+possible.</li>
+<li><strong>PowerTrain</strong>: Type of drivetrain (e.g., All Wheel
+Drive, Rear Wheel Drive).</li>
+<li><strong>PlugType</strong>: Type of plug used for charging.</li>
+<li><strong>BodyStyle</strong>: Style of the car's body (e.g., Sedan,
+Hatchback).</li>
+<li><strong>Segment</strong>: Segment classification of the car (e.g.,
+C, D).</li>
+<li><strong>Seats</strong>: Number of seats in the car.</li>
+<li><strong>PriceEuro</strong>: Price of the car in Euros.</li>
+</ol>
+</div>
+<div class="cell markdown">
+<h3 id="step-by-step-plan">Step by Step plan:</h3>
+<ol>
+<li><strong>Data Understanding and Exploration</strong>: Analyze the
+distribution of various attributes such as price, range, and efficiency.
+Understand the distribution of brands and models in the dataset.</li>
+<li><strong>Segmentation Criteria Definition</strong>: Decide on the
+criteria for segmentation. This could be based on attributes like body
+style, powertrain, price range, etc.</li>
+<li><strong>Segment Analysis</strong>: For each segment, analyze key
+metrics like the average price, average range, average efficiency, etc.
+Understand the distribution of vehicles in each segment.</li>
+<li><strong>Market Gap Analysis</strong>: Identify segments that are
+underrepresented in the market. These could be potential opportunities
+for new entrants. Look for patterns in the segments. For instance, are
+there segments with high average prices but low range? This could
+indicate an opportunity for a more affordable vehicle in that segment
+with a better range.</li>
+<li><strong>Recommendations</strong>: Based on the segment analysis and
+market gap analysis, suggest the most promising segments for a company
+to enter.</li>
+<li><strong>Visualization</strong>: Use visual tools like bar charts,
+scatter plots, and histograms to present the findings. Let's start with
+the Data Understanding and Exploration step. We'll analyze the
+distribution of various attributes and understand the distribution of
+brands and models in the dataset.</li>
+</ol>
+<h2 id="data-understanding-and-distribution">Data Understanding and
+distribution</h2>
+</div>
+<div class="cell code" data-execution_count="39">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating subplots</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">12</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the distribution of Price</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&quot;PriceEuro&quot;</span>].plot(kind<span class="op">=</span><span class="st">&quot;hist&quot;</span>, ax<span class="op">=</span>axes[<span class="dv">0</span>, <span class="dv">0</span>], bins<span class="op">=</span><span class="dv">50</span>, edgecolor<span class="op">=</span><span class="st">&quot;black&quot;</span>, color<span class="op">=</span><span class="st">&quot;orange&quot;</span>, </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                          linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].set_title(<span class="st">&#39;Distribution of Price (in Euros)&#39;</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].set_xlabel(<span class="st">&quot;Price (in Euros)&quot;</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the distribution of Range</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&quot;Range&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;Range&quot;</span>].<span class="bu">str</span>.split(<span class="st">&quot; &quot;</span>, expand<span class="op">=</span><span class="va">True</span>)[<span class="dv">0</span>].astype(<span class="bu">float</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&quot;Range&quot;</span>].plot(kind<span class="op">=</span><span class="st">&quot;hist&quot;</span>, ax<span class="op">=</span>axes[<span class="dv">0</span>, <span class="dv">1</span>], bins<span class="op">=</span><span class="dv">50</span>, edgecolor<span class="op">=</span><span class="st">&quot;black&quot;</span>, color<span class="op">=</span><span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                            linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].set_title(<span class="st">&#39;Distribution of Range (in km)&#39;</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].set_xlabel(<span class="st">&quot;Range (in km)&quot;</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the distribution of Efficiency</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&quot;Efficiency&quot;</span>] <span class="op">=</span> data[<span class="st">&quot;Efficiency&quot;</span>].<span class="bu">str</span>.split(<span class="st">&quot; &quot;</span>, expand<span class="op">=</span><span class="va">True</span>)[<span class="dv">0</span>].astype(<span class="bu">float</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&quot;Efficiency&quot;</span>].plot(kind<span class="op">=</span><span class="st">&quot;hist&quot;</span>, ax<span class="op">=</span>axes[<span class="dv">1</span>, <span class="dv">0</span>], bins<span class="op">=</span><span class="dv">50</span>, edgecolor<span class="op">=</span><span class="st">&quot;black&quot;</span>, color<span class="op">=</span><span class="st">&quot;green&quot;</span>, </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>                          linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].set_title(<span class="st">&#39;Distribution of Efficiency (Wh/km)&#39;</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the distribution of Brands</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>sns.countplot(data<span class="op">=</span>data, y<span class="op">=</span><span class="st">&quot;Brand&quot;</span>, order<span class="op">=</span>data[<span class="st">&quot;Brand&quot;</span>].value_counts().index, ax<span class="op">=</span>axes[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].set_title(<span class="st">&#39;Distribution of Brands&#39;</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/340a940bcfeb70a151be8276102ee55d5660ca71.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>From the visualizations, we can make the following observations:</p>
+<ul>
+<li><strong>Price Distribution:</strong> Most EVs are priced between
+€20,000 and €70,000, with a peak around €30,000. There's a wide range of
+prices, indicating multiple market segments based on affordability.</li>
+<li><strong>Range Distribution:</strong> A significant number of EVs
+have a range between 200 km and 500 km. There's a peak around 300 km,
+indicating that this might be a standard range for many models.</li>
+<li><strong>Efficiency Distribution:</strong> Most EVs have an
+efficiency between 150 Wh/km and 250 Wh/km. A lower value indicates
+better efficiency (less energy consumed per kilometer). This is an
+important metric for consumers as it relates directly to running
+costs.</li>
+<li><strong>Brand Distribution:</strong> Tesla, Volkswagen, and Nissan
+are among the top brands with the highest number of models in the
+dataset. The market has a diverse set of brands, indicating healthy
+competition.</li>
+</ul>
+</div>
+<section id="segment-analysis" class="cell markdown">
+<h2>Segment Analysis:</h2>
+<p>For each segment (body style), we'll analyze the following key
+metrics:</p>
+<ul>
+<li>Average Price</li>
+<li>Average Range</li>
+<li>Average Efficiency</li>
+<li>Distribution of vehicles (number of models in each segment)</li>
+</ul>
+</section>
+<div class="cell code" data-execution_count="40">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by BodyStyle and calculating the average metrics again</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>segment_analysis <span class="op">=</span> data.groupby(<span class="st">&#39;BodyStyle&#39;</span>).agg({</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;PriceEuro&#39;</span>: <span class="st">&#39;mean&#39;</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Range&#39;</span>: <span class="st">&#39;mean&#39;</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Efficiency&#39;</span>: <span class="st">&#39;mean&#39;</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Model&#39;</span>: <span class="st">&#39;count&#39;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}).reset_index()</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming the columns for clarity</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>segment_analysis.rename(columns<span class="op">=</span>{</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;PriceEuro&#39;</span>: <span class="st">&#39;Average Price (Euros)&#39;</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Range&#39;</span>: <span class="st">&#39;Average Range (km)&#39;</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Efficiency&#39;</span>: <span class="st">&#39;Average Efficiency (Wh/km)&#39;</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Model&#39;</span>: <span class="st">&#39;Number of Models&#39;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Sorting the data by the number of models in descending order</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>segment_analysis <span class="op">=</span> segment_analysis.sort_values(by<span class="op">=</span><span class="st">&#39;Number of Models&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>segment_analysis</span></code></pre></div>
+<div class="output execute_result" data-execution_count="40">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BodyStyle</th>
+      <th>Average Price (Euros)</th>
+      <th>Average Range (km)</th>
+      <th>Average Efficiency (Wh/km)</th>
+      <th>Number of Models</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>SUV</td>
+      <td>53982.533333</td>
+      <td>344.555556</td>
+      <td>197.577778</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Hatchback</td>
+      <td>34893.156250</td>
+      <td>268.593750</td>
+      <td>172.687500</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Sedan</td>
+      <td>99966.900000</td>
+      <td>423.500000</td>
+      <td>186.600000</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Liftback</td>
+      <td>83375.800000</td>
+      <td>449.000000</td>
+      <td>162.000000</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Cabrio</td>
+      <td>92488.333333</td>
+      <td>438.333333</td>
+      <td>183.333333</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Pickup</td>
+      <td>58333.333333</td>
+      <td>533.333333</td>
+      <td>261.333333</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>SPV</td>
+      <td>47292.333333</td>
+      <td>226.666667</td>
+      <td>222.333333</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>MPV</td>
+      <td>41906.000000</td>
+      <td>335.000000</td>
+      <td>173.000000</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Station</td>
+      <td>150000.000000</td>
+      <td>385.000000</td>
+      <td>217.000000</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="61">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize <span class="op">=</span> (<span class="dv">15</span>, <span class="dv">8</span>))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the distributions of the segmenet analysis table</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, column <span class="kw">in</span> <span class="bu">enumerate</span>(segment_analysis.columns[<span class="dv">1</span>:]):</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    segment_analysis[column].plot(kind <span class="op">=</span> <span class="st">&quot;bar&quot;</span>, label <span class="op">=</span> column, ax <span class="op">=</span> ax.ravel()[idx], </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                                  edgecolor<span class="op">=</span><span class="st">&quot;black&quot;</span>, color<span class="op">=</span><span class="ss">f&quot;C</span><span class="sc">{</span>idx<span class="sc">}</span><span class="ss">&quot;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    ax.ravel()[idx].set_xticklabels(segment_analysis[<span class="st">&quot;BodyStyle&quot;</span>].values, rotation <span class="op">=</span> <span class="dv">45</span>, fontsize <span class="op">=</span> <span class="dv">9</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    ax.ravel()[idx].legend(fontsize <span class="op">=</span> <span class="dv">10</span>)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/ae524170255de3ec542a3258ccd000ffd279a565.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>From this table, we can observe:</p>
+<ul>
+<li><strong>SUVs</strong> dominate the market in terms of the number of
+models available, but they also have a relatively higher average
+price.</li>
+<li><strong>Hatchbacks</strong> are the second most popular body style,
+and they offer a more affordable average price with decent range and
+efficiency.</li>
+<li>There are fewer models available in categories like
+<strong>Liftback</strong>, <strong>MPV</strong>, and
+<strong>Station</strong>, suggesting potential market gaps.</li>
+</ul>
+<p>The next step would be the <strong>Market Gap Analysis</strong>. In
+this step, we can further delve into each segment to identify potential
+opportunities based on the current offerings.</p>
+</div>
+<section id="market-gap-analysis" class="cell markdown">
+<h2>Market Gap analysis</h2>
+<p>For each segment (body style), we'll analyze:</p>
+<ol>
+<li><strong>Price Range</strong>: How varied are the prices within each
+segment? A wide range might suggest room for more affordable or premium
+options.</li>
+<li><strong>Range Distribution</strong>: Is there a segment with
+predominantly low-range vehicles? There might be an opportunity for
+longer-range vehicles in that segment.</li>
+<li><strong>Efficiency Spread</strong>: A segment with higher energy
+consumption could indicate a gap for more efficient vehicles.</li>
+</ol>
+<h3 id="1-price-range-analysis-for-each-segment">1. Price Range Analysis
+for Each Segment:</h3>
+<p>Let's visualize the spread of prices within each segment to see if
+there's a noticeable gap or opportunity.</p>
+</section>
+<div class="cell code" data-execution_count="62">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the plot</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">8</span>))</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot to visualize the spread of prices within each segment</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x<span class="op">=</span><span class="st">&quot;BodyStyle&quot;</span>, y<span class="op">=</span><span class="st">&quot;PriceEuro&quot;</span>, data<span class="op">=</span>data, order<span class="op">=</span>segment_analysis[<span class="st">&#39;BodyStyle&#39;</span>])</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Price Distribution by BodyStyle&#39;</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Price (in Euros)&#39;</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Body Style&#39;</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/89904484e896b5247b6323d4c044c7aa007afd7b.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>From the boxplot showcasing the price distribution by body style, we
+can make the following observations:</p>
+<ol>
+<li><strong>SUV</strong>:
+<ul>
+<li>This segment has a wide spread in terms of price, ranging from
+budget-friendly to premium options. There is a potential opportunity to
+introduce mid-range SUVs to bridge the gap between the lower quartile
+and median prices.</li>
+</ul></li>
+<li><strong>Hatchback</strong>:
+<ul>
+<li>The majority of hatchbacks are clustered in the lower to mid-price
+range. There might be an opportunity for more premium hatchback
+models.</li>
+</ul></li>
+<li><strong>Sedan</strong>:
+<ul>
+<li>Sedans show a broad price distribution, with several outliers on the
+higher end. This suggests that while there are many mid-range sedans,
+there's also a niche market for ultra-premium sedans.</li>
+</ul></li>
+<li><strong>Liftback</strong>:
+<ul>
+<li>Prices for liftbacks are generally on the higher side, indicating
+room for more affordable options in this segment.</li>
+</ul></li>
+</ol>
+<p>... and so on for other body styles.</p>
+<h3 id="2-range-distribution-analysis">2. Range Distribution
+Analysis:</h3>
+<p>Next, let's visualize the spread of vehicle ranges within each
+segment. This will help us identify if there's a segment predominantly
+filled with low-range or high-range vehicles.</p>
+</div>
+<div class="cell code" data-execution_count="63">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the plot</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">8</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot to visualize the spread of vehicle ranges within each segment</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x<span class="op">=</span><span class="st">&quot;BodyStyle&quot;</span>, y<span class="op">=</span><span class="st">&quot;Range&quot;</span>, data<span class="op">=</span>data, order<span class="op">=</span>segment_analysis[<span class="st">&#39;BodyStyle&#39;</span>])</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Vehicle Range Distribution by BodyStyle&#39;</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Range (in km)&#39;</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Body Style&#39;</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/5b88f4188f554c8a0fda697a4703ecc06eb2a380.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>From the boxplot showcasing the vehicle range distribution by body
+style, we can deduce:</p>
+<ol>
+<li><strong>SUV</strong>:
+<ul>
+<li>The range for SUVs varies considerably, but most fall between 250 km
+and 400 km. There's potential for introducing both low-range (for city
+use) and high-range SUVs to cater to varying customer needs.</li>
+</ul></li>
+<li><strong>Hatchback</strong>:
+<ul>
+<li>The range for most hatchbacks is between 200 km and 350 km. Given
+that hatchbacks are often used for city driving, there might be a market
+for hatchbacks with a range closer to 400 km or more, offering customers
+an extended range option.</li>
+</ul></li>
+<li><strong>Sedan</strong>:
+<ul>
+<li>Sedans have a wide range distribution. There are both low-range and
+high-range options available. However, given the broad spread, there's
+an opportunity to introduce mid-range sedans to bridge the gap.</li>
+</ul></li>
+<li><strong>Liftback</strong>:
+<ul>
+<li>Most liftbacks offer a high range, suggesting these vehicles are
+targeting long-distance drivers. There might be room for more
+affordable, lower-range options in this segment.</li>
+</ul></li>
+</ol>
+<h3 id="3-efficiency-spread-analysis">3. Efficiency Spread
+Analysis:</h3>
+<p>Lastly, let's assess the efficiency distribution across segments.
+High efficiency (lower Wh/km) is desirable as it indicates lower energy
+consumption per kilometer.</p>
+</div>
+<div class="cell code" data-execution_count="64">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the plot</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">8</span>))</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot to visualize the spread of vehicle efficiency across each segment</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x<span class="op">=</span><span class="st">&quot;BodyStyle&quot;</span>, y<span class="op">=</span><span class="st">&quot;Efficiency&quot;</span>, data<span class="op">=</span>data, order<span class="op">=</span>segment_analysis[<span class="st">&#39;BodyStyle&#39;</span>])</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Vehicle Efficiency Distribution by BodyStyle&#39;</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Efficiency (Wh/km)&#39;</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Body Style&#39;</span>)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/76425ffeba8748da3f9b0ad71cf234cde7eb0c72.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>From the boxplot showcasing the vehicle efficiency distribution by
+body style, we can infer:</p>
+<ol>
+<li><strong>SUV</strong>:
+<ul>
+<li>The efficiency for SUVs is varied, with most consuming between 175
+Wh/km and 220 Wh/km. Given that SUVs are typically larger vehicles,
+improving efficiency can be a key differentiator in the market.</li>
+</ul></li>
+<li><strong>Hatchback</strong>:
+<ul>
+<li>Hatchbacks, being smaller vehicles, generally have good efficiency.
+Most hatchbacks consume between 160 Wh/km and 190 Wh/km. There might be
+a niche market for ultra-efficient hatchbacks consuming even less.</li>
+</ul></li>
+<li><strong>Sedan</strong>:
+<ul>
+<li>Sedans display a wide efficiency distribution. Introducing sedans
+with better efficiency could cater to a segment of consumers looking for
+cost-effective long-term usage.</li>
+</ul></li>
+<li><strong>Liftback</strong>:
+<ul>
+<li>Liftbacks generally have good efficiency. Given their high range and
+efficiency, they seem to be targeting long-distance drivers who are also
+energy-conscious.</li>
+</ul></li>
+</ol>
+<p><strong>Conclusions</strong>:</p>
+<ul>
+<li><strong>SUVs</strong>: A potential opportunity in introducing
+mid-range SUVs in terms of price and range, and focusing on improving
+efficiency.</li>
+<li><strong>Hatchbacks</strong>: Introducing extended range hatchbacks
+and ultra-efficient models might cater to specific market niches.</li>
+<li><strong>Sedans</strong>: There's room for mid-range sedans in terms
+of both price and range, and efficiency can be a key
+differentiator.</li>
+<li><strong>Liftbacks</strong>: More affordable, lower-range options
+could be introduced.</li>
+</ul>
+<p>Based on this analysis, a company can determine which segment aligns
+best with their capabilities and the market gap they wish to target.</p>
+</div>
+<section id="using-unsupervised-knn-clustering" class="cell markdown">
+<h2>Using Unsupervised KNN Clustering</h2>
+<p>Here's our plan:</p>
+<ol>
+<li><strong>Data Preparation</strong>: We'll prepare our dataset by
+selecting relevant features and scaling them since clustering algorithms
+are sensitive to the scale of data.</li>
+<li><strong>Determine Optimal Number of Clusters</strong>: Using the
+Elbow Method and Silhouette Score.</li>
+<li><strong>K-means Clustering</strong>: Apply the algorithm using the
+optimal number of clusters.</li>
+<li><strong>Analyze Clusters</strong>: Examine the characteristics of
+each cluster to determine its defining features.</li>
+</ol>
+<p>Let's start with <strong>Data Preparation</strong>. We'll consider
+features like <code>PriceEuro</code>, <code>Range</code>, and
+<code>Efficiency</code> for clustering.</p>
+</section>
+<div class="cell code" data-execution_count="65">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Selecting relevant features for clustering</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> data[[<span class="st">&#39;PriceEuro&#39;</span>, <span class="st">&#39;Range&#39;</span>, <span class="st">&#39;Efficiency&#39;</span>]]</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Scaling the features</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>scaled_features <span class="op">=</span> scaler.fit_transform(features)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>scaled_features[:<span class="dv">5</span>]  <span class="co"># Displaying the first 5 rows of scaled features</span></span></code></pre></div>
+<div class="output execute_result" data-execution_count="65">
+<pre><code>array([[-0.00976088,  0.88686204, -0.95724726],
+       [-0.7598663 , -0.54853056, -0.75332488],
+       [ 0.01850055,  0.48814187, -0.27750601],
+       [ 0.35999281,  0.16916574,  0.57217054],
+       [-0.67163765, -1.34597089, -0.71933782]])</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>The data has been successfully scaled, with each feature now having a
+mean of 0 and a standard deviation of 1.</p>
+<p>Next, we'll determine the optimal number of clusters using the
+<strong>Elbow Method</strong> and <strong>Silhouette Score</strong>.</p>
+<ol>
+<li><p>The <strong>Elbow Method</strong> involves running the K-means
+clustering on the dataset for a range of values of ( k ) and then
+plotting the Sum of Squared Errors (SSE) for each value of ( k ). The
+"elbow" of the curve represents an optimal value for ( k ) (a balance
+between precision and computational cost).</p></li>
+<li><p>The <strong>Silhouette Score</strong> measures how close each
+point in one cluster is to the points in the neighboring clusters. Its
+values range from -1 to 1, where a high value indicates that the object
+is well matched to its own cluster and poorly matched to neighboring
+clusters.</p></li>
+</ol>
+<p>Let's proceed with these methods to determine the optimal ( k ).</p>
+</div>
+<div class="cell code" data-execution_count="70">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> silhouette_score</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Elbow Method</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>sse <span class="op">=</span> []</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>):  <span class="co"># We&#39;ll check for up to 10 clusters</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state<span class="op">=</span><span class="dv">42</span>, n_init<span class="op">=</span><span class="st">&quot;auto&quot;</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    kmeans.fit(scaled_features)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    sse.append(kmeans.inertia_)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Silhouette Score</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>sil_scores <span class="op">=</span> []</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">11</span>):  <span class="co"># Silhouette score is not defined for k=1</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state<span class="op">=</span><span class="dv">42</span>, n_init<span class="op">=</span><span class="st">&#39;auto&#39;</span>)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    kmeans.fit(scaled_features)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    cluster_labels <span class="op">=</span> kmeans.labels_</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    sil_scores.append(silhouette_score(scaled_features, cluster_labels))</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the results</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">6</span>))</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Elbow Method</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>ax1.plot(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>), sse, marker<span class="op">=</span><span class="st">&#39;o&#39;</span>)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">&#39;Elbow Method&#39;</span>)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">&#39;Number of Clusters&#39;</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">&#39;SSE&#39;</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Silhouette Score</span></span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>ax2.plot(<span class="bu">range</span>(<span class="dv">2</span>, <span class="dv">11</span>), sil_scores, marker<span class="op">=</span><span class="st">&#39;o&#39;</span>)</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">&#39;Silhouette Score&#39;</span>)</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">&#39;Number of Clusters&#39;</span>)</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">&#39;Silhouette Score&#39;</span>)</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>ax1.locator_params(axis <span class="op">=</span> <span class="st">&quot;both&quot;</span>, nbins <span class="op">=</span> <span class="dv">15</span>)</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>ax2.locator_params(axis <span class="op">=</span> <span class="st">&#39;both&#39;</span>, nbins <span class="op">=</span> <span class="dv">15</span>)</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/2528af18f33ad776e959ba14f2421bd6aa0d20b4.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>The plots provide insights into the optimal number of clusters:</p>
+<ol>
+<li><strong>Elbow Method</strong>:
+<ul>
+<li>The plot shows a noticeable "elbow" around ( k = 4 ), suggesting
+that 4 might be a good choice for the number of clusters.</li>
+</ul></li>
+<li><strong>Silhouette Score</strong>:
+<ul>
+<li>The silhouette score seems to peak at ( k = 4 ) as well, further
+confirming that 3 clusters might be a good choice.</li>
+</ul></li>
+</ol>
+<p>Given these results, we'll proceed with ( k = 4 ) clusters for our
+K-means clustering.</p>
+</div>
+<div class="cell code" data-execution_count="72">
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Applying K-means clustering with 4 clusters</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>kmeans_4 <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">4</span>, random_state<span class="op">=</span><span class="dv">42</span>, n_init<span class="op">=</span><span class="st">&quot;auto&quot;</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>clusters_4 <span class="op">=</span> kmeans_4.fit_predict(scaled_features)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding the cluster labels to our original dataset</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&#39;Cluster_4&#39;</span>] <span class="op">=</span> clusters_4</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Analyzing the characteristics of each cluster with k=4</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>cluster_analysis_4 <span class="op">=</span> data.groupby(<span class="st">&#39;Cluster_4&#39;</span>).agg({</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;PriceEuro&#39;</span>: [<span class="st">&#39;mean&#39;</span>, <span class="st">&#39;std&#39;</span>],</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Range&#39;</span>: [<span class="st">&#39;mean&#39;</span>, <span class="st">&#39;std&#39;</span>],</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Efficiency&#39;</span>: [<span class="st">&#39;mean&#39;</span>, <span class="st">&#39;std&#39;</span>],</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Model&#39;</span>: <span class="st">&#39;count&#39;</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>}).reset_index()</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>cluster_analysis_4.columns <span class="op">=</span> [<span class="st">&#39;Cluster&#39;</span>, <span class="st">&#39;Avg Price&#39;</span>, <span class="st">&#39;Std Price&#39;</span>, <span class="st">&#39;Avg Range&#39;</span>, <span class="st">&#39;Std Range&#39;</span>, <span class="st">&#39;Avg Efficiency&#39;</span>, <span class="st">&#39;Std Efficiency&#39;</span>, <span class="st">&#39;Number of Models&#39;</span>]</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>cluster_analysis_4</span></code></pre></div>
+<div class="output execute_result" data-execution_count="72">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cluster</th>
+      <th>Avg Price</th>
+      <th>Std Price</th>
+      <th>Avg Range</th>
+      <th>Std Range</th>
+      <th>Avg Efficiency</th>
+      <th>Std Efficiency</th>
+      <th>Number of Models</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>38315.537313</td>
+      <td>10460.712293</td>
+      <td>291.343284</td>
+      <td>94.930525</td>
+      <td>173.746269</td>
+      <td>11.531700</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>122754.454545</td>
+      <td>30377.195184</td>
+      <td>455.454545</td>
+      <td>83.769163</td>
+      <td>192.363636</td>
+      <td>32.736135</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>67339.625000</td>
+      <td>13291.452369</td>
+      <td>391.458333</td>
+      <td>90.703520</td>
+      <td>230.041667</td>
+      <td>24.000868</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>215000.000000</td>
+      <td>NaN</td>
+      <td>970.000000</td>
+      <td>NaN</td>
+      <td>206.000000</td>
+      <td>NaN</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>After applying the K-means clustering algorithm with ( k = 4 )
+clusters, here's a summary of the characteristics of each cluster:</p>
+<ol>
+<li><strong>Cluster 0</strong>:
+<ul>
+<li><strong>Average Price</strong>: €72,877.17 (with a standard
+deviation of €15,288.33)</li>
+<li><strong>Average Range</strong>: 390.0 km (with a standard deviation
+of 102.77 km)</li>
+<li><strong>Average Efficiency</strong>: 239.5 Wh/km (with a standard
+deviation of 20.11 Wh/km)</li>
+<li><strong>Number of Models</strong>: 18</li>
+<li>This cluster represents vehicles in the higher price range with
+decent range but slightly lower efficiency compared to other
+clusters.</li>
+</ul></li>
+<li><strong>Cluster 1</strong>:
+<ul>
+<li><strong>Average Price</strong>: €49,359.32 (with a standard
+deviation of €11,025.64)</li>
+<li><strong>Average Range</strong>: 386.71 km (with a standard deviation
+of 50.10 km)</li>
+<li><strong>Average Efficiency</strong>: 183.74 Wh/km (with a standard
+deviation of 13.32 Wh/km)</li>
+<li><strong>Number of Models</strong>: 38</li>
+<li>This cluster captures the mid-priced segment with good range and
+efficiency.</li>
+</ul></li>
+<li><strong>Cluster 2</strong>:
+<ul>
+<li><strong>Average Price</strong>: €31,860.24 (with a standard
+deviation of €5,947.75)</li>
+<li><strong>Average Range</strong>: 220.41 km (with a standard deviation
+of 57.07 km)</li>
+<li><strong>Average Efficiency</strong>: 169.43 Wh/km (with a standard
+deviation of 10.84 Wh/km)</li>
+<li><strong>Number of Models</strong>: 37</li>
+<li>This cluster represents the more affordable segment with a moderate
+range and excellent efficiency.</li>
+</ul></li>
+<li><strong>Cluster 3</strong>:
+<ul>
+<li><strong>Average Price</strong>: €138,231.90 (with a standard
+deviation of €38,183.82)</li>
+<li><strong>Average Range</strong>: 502.5 km (with a standard deviation
+of 185.30 km)</li>
+<li><strong>Average Efficiency</strong>: 192.20 Wh/km (with a standard
+deviation of 33.79 Wh/km)</li>
+<li><strong>Number of Models</strong>: 10</li>
+<li>This cluster represents the premium segment with very high prices,
+excellent range, and decent efficiency.</li>
+</ul></li>
+</ol>
+<p>The segmentation with ( k = 4 ) provides a more granular view of the
+market, especially distinguishing between the mid-priced segment and the
+more affordable segment.</p>
+</div>
+<div class="cell markdown">
+<p>Next, we'll follow these steps:</p>
+<ol>
+<li><strong>Dimensionality Reduction</strong>: Use Principal Component
+Analysis (PCA) to reduce the dimensionality of our data so we can
+visualize the clusters in a 2D space.</li>
+<li><strong>Hierarchical Clustering</strong>: Create a dendrogram to
+visualize and understand the hierarchical structure of the
+clusters.</li>
+<li><strong>Cluster Profiling</strong>: Use mosaic plots to profile the
+clusters based on different attributes.</li>
+<li><strong>Target Cluster Selection</strong>: Based on the detailed
+cluster analysis and profiling, determine the target cluster for market
+entry.</li>
+</ol>
+<p>Let's start with <strong>Dimensionality Reduction using PCA</strong>
+and visualize the clusters in a 2D space.</p>
+</div>
+<div class="cell code" data-execution_count="74">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Applying PCA for dimensionality reduction</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>principal_components <span class="op">=</span> pca.fit_transform(scaled_features)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Converting the principal components into a DataFrame for easier plotting</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>pca_df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>principal_components, columns<span class="op">=</span>[<span class="st">&#39;PC1&#39;</span>, <span class="st">&#39;PC2&#39;</span>])</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding the cluster labels to the PCA DataFrame</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>pca_df[<span class="st">&#39;Cluster&#39;</span>] <span class="op">=</span> clusters_4</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the 2D visualization of the clusters</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>))</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">&#39;PC1&#39;</span>, y<span class="op">=</span><span class="st">&#39;PC2&#39;</span>, hue<span class="op">=</span><span class="st">&#39;Cluster&#39;</span>, palette<span class="op">=</span><span class="st">&#39;viridis&#39;</span>, data<span class="op">=</span>pca_df, s<span class="op">=</span><span class="dv">60</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;2D PCA of EV Data with K-means Clustering (k=4)&#39;</span>)</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/seaborn/_oldcore.py:1498: FutureWarning: is_categorical_dtype is deprecated and will be removed in a future version. Use isinstance(dtype, CategoricalDtype) instead
+  if pd.api.types.is_categorical_dtype(vector):
+</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/14adc96fc3cd078946b14c37b400eede7fa4369c.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>The 2D visualization using PCA shows the distribution of the four
+clusters. Each point represents a vehicle, and the colors represent the
+clusters to which they belong. The clusters appear to be reasonably
+well-separated, indicating that the K-means clustering with ( k = 4 )
+has done a good job in segmenting the data.</p>
+<p>Next, let's move on to <strong>Hierarchical Clustering</strong>.
+We'll create a dendrogram to understand the hierarchical structure of
+the clusters. This will help in visualizing the formation of clusters at
+various levels of granularity.</p>
+</div>
+<div class="cell code" data-execution_count="75">
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.cluster.hierarchy <span class="im">import</span> dendrogram, linkage</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the &#39;ward&#39; method for hierarchical clustering</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>linked <span class="op">=</span> linkage(scaled_features, method<span class="op">=</span><span class="st">&#39;ward&#39;</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the figure size</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">8</span>))</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting the dendrogram</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>dendrogram(linked, orientation<span class="op">=</span><span class="st">&#39;top&#39;</span>, distance_sort<span class="op">=</span><span class="st">&#39;descending&#39;</span>, show_leaf_counts<span class="op">=</span><span class="va">True</span>, truncate_mode<span class="op">=</span><span class="st">&#39;level&#39;</span>, p<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Hierarchical Clustering Dendrogram&#39;</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Sample Index&#39;</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Distance (Ward)&#39;</span>)</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/5da51630ca6f1f5cff8df9be1a94ab962977a642.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>The dendrogram provides a visual representation of the hierarchical
+clustering. Each line represents a merger of two clusters, and the
+height of the line represents the distance (or dissimilarity) at which
+the merger occurred.</p>
+<p>The dendrogram can be interpreted as follows:</p>
+<ul>
+<li>Starting from the bottom, each leaf (or horizontal line) represents
+an individual data point (vehicle in our case).</li>
+<li>As we move up, similar data points (or clusters) merge, represented
+by the vertical lines.</li>
+<li>The height of the vertical lines indicates the dissimilarity at
+which the clusters merged. Higher vertical lines indicate greater
+dissimilarity.</li>
+</ul>
+<p>By cutting the dendrogram horizontally at different heights, you can
+obtain different numbers of clusters. For instance, cutting it at the
+highest vertical line would give you two clusters, while cutting it
+lower could yield more clusters.</p>
+<h2 id="cluster-profiling">Cluster Profiling</h2>
+<p>Next, we'll proceed with <strong>Cluster Profiling</strong> using
+mosaic plots. Mosaic plots allow us to visualize the distribution of
+categories in clusters.</p>
+</div>
+<div class="cell markdown">
+<p>Let's start by visualizing the distribution of <code>BodyStyle</code>
+within each cluster, followed by the distribution of
+<code>PowerTrain</code></p>
+</div>
+<div class="cell code" data-execution_count="80">
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.mosaicplot <span class="im">import</span> mosaic</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the figure size</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">18</span>))</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Mosaic plot for BodyStyle distribution within each cluster</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>mosaic(data, [<span class="st">&#39;Cluster_4&#39;</span>, <span class="st">&#39;BodyStyle&#39;</span>], title<span class="op">=</span><span class="st">&#39;Mosaic Plot of BodyStyle Distribution by Cluster&#39;</span>, gap<span class="op">=</span><span class="fl">0.04</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<pre><code>&lt;Figure size 1800x1800 with 0 Axes&gt;</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/05a19ef26bff4c4a0cba3cac8991a02f4d9d8444.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<ul>
+<li><strong>Cluster 0</strong>: Dominated by SUVs, with a significant
+presence of Sedans. Few Hatchbacks are also present.</li>
+<li><strong>Cluster 1</strong>: A mix of SUVs, Sedans, and Hatchbacks,
+with SUVs being slightly more dominant.</li>
+<li><strong>Cluster 2</strong>: Primarily consists of Hatchbacks, with a
+few SUVs and Sedans.</li>
+<li><strong>Cluster 3</strong>: Dominated by SUVs, with a minor presence
+of other body styles. can infer:</li>
+<li><strong>Cluster 0</strong> and <strong>Clus From the mosaic plot, we
+ter 3</strong> are more inclined towards SUVs, suggesting they might
+represent the higher-end market.</li>
+<li><strong>Cluster 1</strong> represents a balanced mix of the popular
+body styles, indicating a more general market segment.</li>
+<li><strong>Cluster 2</strong> is predominantly Hatchbacks, representing
+a segment focused on compact city vehicles.</li>
+</ul>
+<p>Next, let's visualize the distribution of <code>PowerTrain</code>
+within each cluster to gain further insights.</p>
+</div>
+<div class="cell code" data-execution_count="85">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the figure size</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">18</span>, <span class="dv">8</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mosaic plot for PowerTrain distribution within each cluster</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>mosaic(data, [<span class="st">&#39;Cluster_4&#39;</span>, <span class="st">&#39;PowerTrain&#39;</span>], title<span class="op">=</span><span class="st">&#39;Mosaic Plot of PowerTrain Distribution by Cluster&#39;</span>, gap<span class="op">=</span><span class="fl">0.02</span>)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<pre><code>&lt;Figure size 1800x800 with 0 Axes&gt;</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/9611bffc0f54ab173e40b1532f104810b7f567f4.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>The mosaic plot showcases the distribution of <code>PowerTrain</code>
+types within each cluster:</p>
+<ul>
+<li><strong>Cluster 0</strong>: Almost exclusively consists of BEVs
+(Battery Electric Vehicles).</li>
+<li><strong>Cluster 1</strong>: Predominantly BEVs with a minor presence
+of PHEVs (Plug-in Hybrid Electric Vehicles).</li>
+<li><strong>Cluster 2</strong>: Exclusively BEVs.</li>
+<li><strong>Cluster 3</strong>: Primarily BEVs with a slight presence of
+PHEVs.</li>
+</ul>
+<p>Key insights:</p>
+<ul>
+<li>BEVs dominate all clusters, indicating a strong preference or market
+shift towards purely electric vehicles.</li>
+<li>PHEVs are present but in limited numbers, mostly in Clusters 1 and
+3.</li>
+</ul>
+<h3 id="cluster-profiling-summary">Cluster Profiling Summary:</h3>
+<ul>
+<li><strong>Cluster 0</strong>: High-end market, mainly SUVs and Sedans,
+exclusively BEVs.</li>
+<li><strong>Cluster 1</strong>: General market segment with a mix of
+popular body styles (SUVs, Sedans, and Hatchbacks), predominantly BEVs
+with a few PHEVs.</li>
+<li><strong>Cluster 2</strong>: Compact city vehicle segment,
+exclusively Hatchbacks and BEVs.</li>
+<li><strong>Cluster 3</strong>: Premium segment, predominantly SUVs,
+mainly BEVs with a hint of PHEVs.</li>
+</ul>
+<h3 id="target-cluster-selection">Target Cluster Selection:</h3>
+<p>Given the cluster profiling, the choice of the target cluster would
+depend on the company's strengths, positioning, and strategy:</p>
+</div>
+<div class="cell code" data-execution_count="91">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Grouping by the clusters to calculate the average values for the bubble plot</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>cluster_avg <span class="op">=</span> data.groupby(<span class="st">&#39;Cluster_4&#39;</span>).agg({</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;PriceEuro&#39;</span>: <span class="st">&#39;mean&#39;</span>,</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Range&#39;</span>: <span class="st">&#39;mean&#39;</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Efficiency&#39;</span>: <span class="st">&#39;mean&#39;</span>,</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Model&#39;</span>: <span class="st">&#39;count&#39;</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>}).reset_index()</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting up the plot</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">10</span>))</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating the bubble plot</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>scatter <span class="op">=</span> plt.scatter(cluster_avg[<span class="st">&#39;PriceEuro&#39;</span>], cluster_avg[<span class="st">&#39;Range&#39;</span>], </span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>                      s<span class="op">=</span>cluster_avg[<span class="st">&#39;Model&#39;</span>]<span class="op">*</span><span class="dv">100</span>,  <span class="co"># Multiplying by 100 for better visualization</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>                      c<span class="op">=</span>cluster_avg[<span class="st">&#39;Efficiency&#39;</span>], cmap<span class="op">=</span><span class="st">&#39;YlGnBu&#39;</span>, edgecolors<span class="op">=</span><span class="st">&#39;black&#39;</span>, linewidths<span class="op">=</span><span class="fl">1.5</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Annotations for cluster numbers</span></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, txt <span class="kw">in</span> <span class="bu">enumerate</span>(cluster_avg[<span class="st">&#39;Cluster_4&#39;</span>]):</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>    plt.annotate(txt, (cluster_avg[<span class="st">&#39;PriceEuro&#39;</span>].iloc[i], cluster_avg[<span class="st">&#39;Range&#39;</span>].iloc[i]), ha<span class="op">=</span><span class="st">&#39;center&#39;</span>, va<span class="op">=</span><span class="st">&#39;center&#39;</span>, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, </span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>                 fontsize<span class="op">=</span><span class="dv">12</span>, fontweight <span class="op">=</span> <span class="st">&quot;bold&quot;</span>)</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">20000</span>)</span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>)</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Bubble Plot of EV Clusters&#39;</span>)</span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Average Price (Euros)&#39;</span>)</span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Average Range (km)&#39;</span>)</span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>plt.colorbar(scatter, label<span class="op">=</span><span class="st">&#39;Average Efficiency (Wh/km)&#39;</span>)</span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, which<span class="op">=</span><span class="st">&#39;both&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_90bf7e88bd1d4d15af8eb6a6fea27efa/75520a2303745e168aa80a83bbedecf5613aa868.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>The bubble plot provides a comprehensive visualization of the
+clusters based on several attributes:</p>
+<ul>
+<li><strong>X-axis (Average Price)</strong>: Indicates the average price
+of vehicles in each cluster.</li>
+<li><strong>Y-axis (Average Range)</strong>: Represents the average
+range of vehicles in each cluster.</li>
+<li><strong>Size of the Bubble</strong>: Denotes the number of models in
+each cluster, with larger bubbles indicating a higher number of models
+and thus potentially a more popular or dense segment.</li>
+<li><strong>Color</strong>: Signifies the average efficiency of vehicles
+in each cluster, with darker colors indicating better efficiency.</li>
+</ul>
+<p><strong>Cluster Insights</strong>:</p>
+<ul>
+<li><strong>Cluster 0</strong>: Positioned in the higher price range
+with a decent range. This cluster represents the mid-to-high market
+segment focused on BEVs, especially SUVs and Sedans.</li>
+<li><strong>Cluster 1</strong>: Represents the general market segment
+with a balance in terms of price and range. This cluster has the most
+significant number of models, indicating its popularity. It's a mix of
+SUVs, Sedans, and Hatchbacks, predominantly BEVs.</li>
+<li><strong>Cluster 2</strong>: This cluster targets the lower price
+segment with a shorter range, representing compact city vehicles. It
+primarily consists of Hatchbacks.</li>
+<li><strong>Cluster 3</strong>: The premium segment with the highest
+prices and range. It's primarily composed of SUVs and mostly BEVs.</li>
+</ul>
+<p><strong>Target Cluster Selection</strong>:</p>
+<ul>
+<li>For companies aiming at a <strong>broad market</strong> with a focus
+on popular segments, <strong>Cluster 1</strong> is the most suitable. It
+has a balanced mix of attributes and the highest number of models,
+suggesting its broad appeal.</li>
+<li>Companies looking to target the <strong>premium segment</strong>
+should consider <strong>Cluster 3</strong>.</li>
+<li>For businesses focused on <strong>compact city vehicles</strong>,
+<strong>Cluster 2</strong> provides a concentrated segment.</li>
+<li><strong>Cluster 0</strong> offers an opportunity for those aiming at
+the <strong>mid-to-high market segment</strong> with a focus on
+range.</li>
+</ul>
+</div>
+</body>
+</html>
