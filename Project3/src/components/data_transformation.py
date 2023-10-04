@@ -10,7 +10,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.feature_selection import SelectKBest, mutual_info_classif
 from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import LabelEncoder
 
 
 # Custom class to remove columns
@@ -29,21 +28,13 @@ class ColumnRemover:
 class DataTransformation:
 
     def __init__(self):
-        self.numerical_columns : list = ['Elevation', 'Aspect', 'Slope',
-                                'Horizontal_Distance_To_Hydrology', 'Vertical_Distance_To_Hydrology',
-                                'Horizontal_Distance_To_Roadways', 'Hillshade_9am', 'Hillshade_Noon',
-                                'Hillshade_3pm', 'Horizontal_Distance_To_Fire_Points']
-        self.categorical_columns : list = ['Wilderness_Area1', 'Wilderness_Area2', 'Wilderness_Area3',
-                                'Wilderness_Area4', 'Soil_Type1']
+        self.numerical_columns : list = ['hour', 'dayofweek', 'quarter', 'month', 'year', 'dayofyear',
+                                        'weekofmonth', 'weekofyear']
         
-        self.reqd_columns : list = ['Elevation','Aspect','Slope','Horizontal_Distance_To_Hydrology',
-                                    'Vertical_Distance_To_Hydrology','Horizontal_Distance_To_Roadways',
-                                    'Hillshade_9am','Hillshade_Noon','Hillshade_3pm',
-                                    'Horizontal_Distance_To_Fire_Points','Wilderness_Area1',
-                                    'Wilderness_Area2','Wilderness_Area3','Wilderness_Area4', 'Soil_Type1']
+        self.reqd_columns : list = ['month', 'hour', 'dayofweek', 'dayofyear']
         
-        self.root_data_file : str = os.path.join("artifacts", "transformed_data")
-        self.root_preprocessor_file : str = os.path.join("artifacts", "preprocessor")
+        self.root_data_file : str = os.path.join("Project3", "artifacts", "transformed_data")
+        self.root_preprocessor_file : str = os.path.join("Project3", "artifacts", "preprocessor")
         self.train_features_path : str =  os.path.join(self.root_data_file, "train_features.csv")
         self.train_labels_path : str = os.path.join(self.root_data_file, "train_labels.csv")
         self.test_features_path : str = os.path.join(self.root_data_file, "test_features.csv")
@@ -62,29 +53,20 @@ class DataTransformation:
         numerical_pipeline = Pipeline(
             steps = [("imputer", SimpleImputer(strategy = "mean")),
                     ("scaler", StandardScaler())])
-        
-        # Categorical pipeline
-        categorical_pipeline = Pipeline(
-            steps = [("imputer", SimpleImputer(strategy = "most_frequent")),
-                     ("onehot", OneHotEncoder(handle_unknown = "ignore"))])
-        
-        label_encoder = LabelEncoder()
-        
+
+                
         # Column transformer
-        transformer = ColumnTransformer([("num_pipeline", numerical_pipeline, self.numerical_columns), 
-                                         ("cat_pipeline", categorical_pipeline, self.categorical_columns)])
+        transformer = ColumnTransformer([("num_pipeline", numerical_pipeline, self.reqd_columns)])
         
         # Mutual information feature selection
         overall_pipeline = Pipeline(steps = [("remover", ColumnRemover(self.reqd_columns)),
-                                                ("transformer", transformer)])
+                                            ("transformer", transformer)])
 
         # Save the preprocessor
         os.makedirs(self.root_preprocessor_file, exist_ok=True)
         PREPROCESSOR_PATH = os.path.join(self.root_preprocessor_file, "preprocessor.pkl")
-        LABEL_ENCODING_PATH = os.path.join(self.root_preprocessor_file, "label_encoding.pkl")
         save_pickle(overall_pipeline, PREPROCESSOR_PATH) 
-        save_pickle(label_encoder, LABEL_ENCODING_PATH)
-        return overall_pipeline, label_encoder
+        return overall_pipeline
 
     def initiate_data_transformation(self, train_data_file : str, test_data_file : str):
         """Transforms the data and saves it in artifacts
@@ -99,8 +81,8 @@ class DataTransformation:
         """
         try:
             logging.info("Loading data for transformation")
-            train_data = pd.read_csv(train_data_file).drop(columns = ["Id"])
-            test_data = pd.read_csv(test_data_file).drop(columns = ["Id"])
+            train_data = pd.read_csv(train_data_file)
+            test_data = pd.read_csv(test_data_file)
             logging.info("Data loaded successfully for transformation")
         except Exception as e:
             logging.error(f"Error loading data for transformation - {e}")
@@ -108,12 +90,12 @@ class DataTransformation:
         # Split data into features and labels
         try:
             logging.info("Splitting data into features and labels")
-            X_train = train_data.drop(columns = ["Cover_Type"])
-            y_train = train_data["Cover_Type"]
+            y_train = train_data["PJME_MW"]
+            X_train = train_data.drop(columns=["PJME_MW"])
             logging.info("Training Data split successfully into features and labels")
 
-            X_test = test_data.drop(columns = ["Cover_Type"])
-            y_test = test_data["Cover_Type"]
+            y_test = test_data["PJME_MW"]
+            X_test = test_data.drop(columns=["PJME_MW"])
             logging.info("Testing Data split successfully into features and labels")
 
         except Exception as e:
@@ -123,7 +105,7 @@ class DataTransformation:
         # Get the preprocessor
         try:
             logging.info("Getting the preprocessor")
-            preprocessor, label_encoder = self.get_data_preprocessor()
+            preprocessor = self.get_data_preprocessor()
             logging.info("Preprocessor loaded successfully")
         
         except Exception as e:
@@ -139,23 +121,15 @@ class DataTransformation:
             logging.error(f"Error fitting the training features set with the preprocessor - {e}")
             sys.exit(1)
         
-        try:
-            logging.info("Fitting the training labels set with the preprocessor")
-            label_encoder.fit(y_train.values.ravel())
-            logging.info("Training labels set fitted successfully")
-
-        except Exception as e:
-            logging.error(f"Error fitting the training labels set with the preprocessor - {e}")
-            sys.exit(1)
             
         # Transform the training and testing dataset with the fitted preprocessor
         try:
             logging.info("Transforming the training and testing dataset with the fitted preprocessor")
             X_train = preprocessor.transform(X_train)
-            y_train = label_encoder.transform(y_train.values.ravel())
+            y_train = y_train
             logging.info("Training set transformed successfully")
             X_test = preprocessor.transform(X_test)
-            y_test = label_encoder.transform(y_test.values.ravel())
+            y_test = y_test
             logging.info("Testing set transformed successfully")
         except Exception as e:
             logging.error(f"Error transforming the training and testing dataset with the fitted preprocessor - {e}")
@@ -192,5 +166,6 @@ class DataTransformation:
 if __name__ == "__main__":
     data_transform = DataTransformation()
     data_transform.get_data_preprocessor()
-    data_transform.initiate_data_transformation("artifacts/data/train_data.csv", "artifacts/data/test_data.csv")
+    data_transform.initiate_data_transformation("/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/data/train_data.csv",
+                                                "/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/data/test_data.csv")
  

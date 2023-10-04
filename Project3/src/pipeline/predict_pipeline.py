@@ -21,7 +21,7 @@ class Predictpipeline:
         # Read the data
         # get model
         try:
-            model = load_pickle("artifacts/model_data/model.pkl")
+            model = load_pickle("/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/model_data/model.pkl")
         except Exception as e:
             logging.error(f"Error in loading model: {e}")
             raise e
@@ -55,7 +55,7 @@ class Predictpipeline:
 
 
 if __name__ == "__main__":
-    data = pd.read_csv('artifacts/data/test_data.csv')
+    data = pd.read_csv('/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/data/test_data.csv')
     logging.info("Data loaded successfully")
     pipeline = Predictpipeline()
     prediction = pipeline.predict(data)

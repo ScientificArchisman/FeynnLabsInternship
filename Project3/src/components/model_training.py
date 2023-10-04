@@ -2,18 +2,47 @@ import numpy as np
 import pandas as pd
 import os
 import sys
-from sklearn.tree import DecisionTreeClassifier, ExtraTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
-from xgboost import XGBClassifier
+from sklearn.tree import DecisionTreeRegressor, ExtraTreeRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor
+from xgboost import XGBRegressor
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import evaluate_models, save_pickle
-from src.utils import load_pickle, save_pickle
+from src.utils import  save_pickle
 import optuna
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import  mean_squared_error, mean_absolute_error
 from optuna import Trial
 
 # from resources.objective_func import objective
+
+def evaluate_models(models:dict, X_train:np.ndarray, y_train:np.ndarray, X_test:np.ndarray, y_test:np.ndarray) -> pd.DataFrame:
+    """Evaluates a number of models using the same training and testing datasets.
+    Args:
+        models (dict): A dictionary of models to evaluate
+        X_train (np.ndarray): Training features
+        y_train (np.ndarray): Training labels
+        X_test (np.ndarray): Testing features
+        y_test (np.ndarray): Testing labels
+    
+        models = {"model_name" : model}
+    Returns:
+        pd.DataFrame: A dataframe of model names and their respective scores
+    """
+    rmse = mse = mae =  np.zeros(len(models)) 
+
+    for model_idx, (model_name, model) in enumerate(models.items()):
+        logging.info(f"Evaluating {model_name}")
+        model.fit(X_train, y_train)
+        y_pred = model.predict(X_test)
+        rmse[model_idx] = np.sqrt(mean_squared_error(y_test, y_pred))
+        mse[model_idx] = mean_squared_error(y_test, y_pred)
+        mae[model_idx] = mean_absolute_error(y_pred=y_pred, y_true=y_test)
+        logging.info(f"Score for {model_name} is {model.score(X_test, y_test)}")
+        
+    return pd.DataFrame({"Model": models.keys(), 
+                         "Model_specs" : models.values(),
+                         "RMSE" : rmse,
+                         "MSE" : mse,
+                         "MAE" : mae})
 
 
 
@@ -22,63 +51,10 @@ SEED = 123
 def objective(trial : Trial):
     X_test = pd.read_csv("artifacts/transformed_data/test_features.csv")
     y_test = pd.read_csv("artifacts/transformed_data/test_labels.csv")
-    classifier = trial.suggest_categorical('classifier', ['DecisionTree', 'ExtraTree', 'GradientBoosting', 'RandomForest', 'XGBoost'])
+    classifier = trial.suggest_categorical('regressor', ['XGBoost'])
 
-    if classifier == 'Decision Tree':
-        params = {
-            'criterion': trial.suggest_categorical('criterion', ['gini', 'entropy']),
-            'splitter': trial.suggest_categorical('splitter', ['best', 'random']),
-            'max_depth': trial.suggest_int('max_depth', 3, 20),
-            'min_samples_split': trial.suggest_int('min_samples_split', 2, 20),
-            'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 10),
-            'max_features': trial.suggest_categorical('max_features', ['auto', 'sqrt', 'log2', None]),
-            'min_impurity_decrease': trial.suggest_float('min_impurity_decrease', 0.0, 0.5),
-            'min_impurity_split': trial.suggest_float('min_impurity_split', 0.0, 0.5),
-            'random_state': SEED,  # For reproducibility
-        }
-        model = DecisionTreeClassifier(**params)
 
-    elif classifier == 'Extra Tree':
-        params = {
-            'criterion': trial.suggest_categorical('criterion', ['gini', 'entropy']),
-            'splitter': trial.suggest_categorical('splitter', ['best', 'random']),
-            'max_depth': trial.suggest_int('max_depth', 3, 20),
-            'min_samples_split': trial.suggest_int('min_samples_split', 2, 20),
-            'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 10),
-            'max_features': trial.suggest_categorical('max_features', ['auto', 'sqrt', 'log2', None]),
-            'min_impurity_decrease': trial.suggest_float('min_impurity_decrease', 0.0, 0.5),
-            'min_impurity_split': trial.suggest_float('min_impurity_split', 0.0, 0.5),
-            'random_state': SEED,  # For reproducibility
-        }
-        model = ExtraTreeClassifier(**params)
-
-    elif classifier == 'Gradient Boosting':
-        params = {
-            'n_estimators': trial.suggest_int('n_estimators', 100, 1000, step=100),
-            'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3, step=0.05),
-            'max_depth': trial.suggest_int('max_depth', 3, 20),
-            'min_samples_split': trial.suggest_int('min_samples_split', 2, 20),
-            'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 10),
-            'max_features': trial.suggest_categorical('max_features', ['auto', 'sqrt', 'log2']),
-            'subsample': trial.suggest_float('subsample', 0.5, 1.0, step=0.1),
-            'random_state': SEED,  # For reproducibility
-        }
-        model = GradientBoostingClassifier(**params)
-
-    elif classifier == 'Random Forest':
-        params = {
-            'n_estimators': trial.suggest_int('n_estimators', 100, 1000, step=100),
-            'criterion': trial.suggest_categorical('criterion', ['gini', 'entropy']),
-            'max_depth': trial.suggest_int('max_depth', 3, 20),
-            'min_samples_split': trial.suggest_int('min_samples_split', 2, 20),
-            'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 10),
-            'max_features': trial.suggest_categorical('max_features', ['auto', 'sqrt', 'log2']),
-            'bootstrap': trial.suggest_categorical('bootstrap', [True, False]),
-            'random_state': SEED,  # For reproducibility
-        }
-        model = RandomForestClassifier(**params)
-
-    elif classifier == 'XGBoost':
+    if classifier == 'XGBoost':
         params = {
             'n_estimators': trial.suggest_int('n_estimators', 100, 1000, step=100),
             'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.3, step=0.05),
@@ -88,10 +64,10 @@ def objective(trial : Trial):
             'gamma': trial.suggest_categorical('gamma', [0.0, 0.1, 0.2, 0.3, 0.4]),
             'random_state': 42,  # For reproducibility
         }
-        model = XGBClassifier(**params)
+        model = XGBRegressor(**params)
 
     # Using accuracy score to estimate model performance
-    score = accuracy_score(y_test, model.predict(X_test).ravel())
+    score = mean_squared_error(y_test, model.predict(X_test))
     return score
 
 
@@ -102,7 +78,7 @@ def objective(trial : Trial):
 class ModelTraining:
     def __init__(self, X_train_path:str, X_test_path:str, 
                    y_train_path:str, y_test_path:str):
-        self.root_model_file = os.path.join("artifacts", "model_data")
+        self.root_model_file = os.path.join("Project3", "artifacts", "model_data")
         self.model_results_file = os.path.join(self.root_model_file, "model_results.csv")
         self.model_file = os.path.join(self.root_model_file, "model.pkl")
         self.tuned_model_file = os.path.join(self.root_model_file, "tuned_model.pkl")
@@ -127,12 +103,12 @@ class ModelTraining:
             best model name: The name of the best model
         """
 
-        rf = RandomForestClassifier()
-        xgb = XGBClassifier()
-        dt = DecisionTreeClassifier()
-        grad_boost = GradientBoostingClassifier()
-        ada_boost = AdaBoostClassifier()
-        et = ExtraTreeClassifier()
+        rf = RandomForestRegressor()
+        xgb = XGBRegressor()
+        dt = DecisionTreeRegressor()
+        grad_boost = GradientBoostingRegressor()
+        ada_boost = AdaBoostRegressor()
+        et = ExtraTreeRegressor()
 
         models = {
             "Random Forest": rf,
@@ -153,8 +129,8 @@ class ModelTraining:
             logging.error(f"Error saving model results - {e}")
             raise CustomException(e, sys)
         
-        best_model = results.sort_values("Accuracy", ascending=False).iloc[0]["Model_specs"]
-        best_model_name = results.sort_values("Accuracy", ascending=False).iloc[0]["Model"]
+        best_model = results.sort_values("RMSE", ascending=False).iloc[0]["Model_specs"]
+        best_model_name = results.sort_values("RMSE", ascending=False).iloc[0]["Model"]
         try:
             logging.info(f"Saving the best model = {best_model_name}")    
             save_pickle(best_model, self.model_file)    
@@ -197,10 +173,10 @@ class ModelTraining:
 
 
 if __name__ == "__main__":
-    model_training = ModelTraining(X_train_path= "artifacts/transformed_data/train_features.csv", 
-                              X_test_path= "artifacts/transformed_data/test_features.csv", 
-                              y_train_path= "artifacts/transformed_data/train_labels.csv",
-                              y_test_path= "artifacts/transformed_data/test_labels.csv")
+    model_training = ModelTraining(X_train_path= "/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/transformed_data/train_features.csv", 
+                              X_test_path= "/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/transformed_data/test_features.csv", 
+                              y_train_path= "/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/transformed_data/train_labels.csv",
+                              y_test_path= "/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/transformed_data/test_labels.csv")
     model_training.fit_models()  
     # model_training.tune_model()
     
