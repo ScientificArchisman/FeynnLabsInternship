@@ -2,8 +2,8 @@ import os
 import pandas as pd
 import sys
 from sklearn.model_selection import train_test_split
-from src.exception import CustomException
-from src.logger import logging
+from src_proj3.exception import CustomException
+from src_proj3.logger import logging
 
 
     
@@ -11,7 +11,7 @@ class DataIngestion:
 
     def __init__(self, data_path) -> None:
         self.data_path : str = data_path
-        self.root_data_file : str = os.path.join("Project3", "artifacts", "data")
+        self.root_data_file : str = os.path.join("artifacts", "data")
         self.test_data_file : str = os.path.join(self.root_data_file, "test_data.csv")
         self.train_data_file : str = os.path.join(self.root_data_file, "train_data.csv")
         self.raw_data_file : str = os.path.join(self.root_data_file, "raw_data.csv")

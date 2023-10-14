@@ -27,5 +27,5 @@ setup(
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     packages=find_packages(),
-    install_requires = get_requirements("requirements.txt"),
+    install_requires = get_requirements("requirements_proj3.txt"),
 )

@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from src.logger import logging
-from src.components import data_transformation
-from src.components.model_training import ModelTraining
-from src.components.data_ingestion import DataIngestion
+from src_proj3.logger import logging
+from src_proj3.components import data_transformation
+from src_proj3.components.model_training import ModelTraining
+from src_proj3.components.data_ingestion import DataIngestion
 
 class TrainModel:
     def __init__(self, data_path) -> None:

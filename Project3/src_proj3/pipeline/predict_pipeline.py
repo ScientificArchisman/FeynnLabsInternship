@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from src.logger import logging
-from src.utils import load_pickle
-from src.components import data_transformation
+from src_proj3.logger import logging
+from src_proj3.utils import load_pickle
+from src_proj3.components import data_transformation
 
 
 
@@ -22,6 +22,7 @@ class Predictpipeline:
         # get model
         try:
             model = load_pickle("/Users/archismanchakraborti/Desktop/python_files/FeynnLabsInternship/Project3/artifacts/model_data/model.pkl")
+            print(model)
         except Exception as e:
             logging.error(f"Error in loading model: {e}")
             raise e

@@ -1,18 +1,17 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import pandas as pd
-from src.logger import logging
-from src.pipeline.predict_pipeline import Predictpipeline
-from src.pipeline.training_pipeline import TrainModel
+from src_proj3.logger import logging
+from src_proj3.pipeline.predict_pipeline import Predictpipeline
+from src_proj3.pipeline.training_pipeline import TrainModel
 import json
-import flasgger
 from flasgger import Swagger
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'csv'}
 
-Swagger(app)
+# Swagger(app)
 
 def allowed_file(filename):
     """ Check if the file is allowed to be uploaded
@@ -53,11 +52,13 @@ def predict_data():
             # Save the file
             filename = os.path.join(app.config['UPLOAD_FOLDER'])
             file.save(filename)
+            logging.info("File saved successfully")
 
             # Read the data
             data = pd.read_csv(filename)
             logging.info("Data loaded successfully")
             pipeline = Predictpipeline()
+            logging.info("Pipeline loaded successfully")
 
             # Make predictions and print
             prediction = pipeline.predict(data)
@@ -91,6 +92,7 @@ def train_model():
             
             train_model = TrainModel(data_path=filename)
             model = train_model.train_model()
+            logging.info("Model trained successfully")
 
 
             details = {

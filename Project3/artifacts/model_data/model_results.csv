@@ -1,5 +1,5 @@
 Model,Model_specs,RMSE,MSE,MAE
-Random Forest,RandomForestRegressor(),2619.7481931180864,2619.7481931180864,2619.7481931180864
+Random Forest,RandomForestRegressor(),2616.8918324947977,2616.8918324947977,2616.8918324947977
 XGBoost,"XGBRegressor(base_score=None, booster=None, callbacks=None,
              colsample_bylevel=None, colsample_bynode=None,
              colsample_bytree=None, device=None, early_stopping_rounds=None,
@@ -11,7 +11,7 @@ XGBoost,"XGBRegressor(base_score=None, booster=None, callbacks=None,
              min_child_weight=None, missing=nan, monotone_constraints=None,
              multi_strategy=None, n_estimators=None, n_jobs=None,
              num_parallel_tree=None, random_state=None, ...)",2158.262827518251,2158.262827518251,2158.262827518251
-Decision Tree,DecisionTreeRegressor(),2964.9433801105224,2964.9433801105224,2964.9433801105224
-Gradient Boosting,GradientBoostingRegressor(),2449.06011796399,2449.06011796399,2449.06011796399
-Ada Boost,AdaBoostRegressor(),3439.234525970581,3439.234525970581,3439.234525970581
-Extra Tree,ExtraTreeRegressor(),3004.0847091330165,3004.0847091330165,3004.0847091330165
+Decision Tree,DecisionTreeRegressor(),2964.380551924973,2964.380551924973,2964.380551924973
+Gradient Boosting,GradientBoostingRegressor(),2449.0601179639903,2449.0601179639903,2449.0601179639903
+Ada Boost,AdaBoostRegressor(),3440.7647066965696,3440.7647066965696,3440.7647066965696
+Extra Tree,ExtraTreeRegressor(),3012.965977620325,3012.965977620325,3012.965977620325

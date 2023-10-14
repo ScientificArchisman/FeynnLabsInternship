@@ -1,6 +1,6 @@
-from src.logger import logging
-from src.exception import CustomException
-from src.utils import save_pickle
+from src_proj3.logger import logging
+from src_proj3.exception import CustomException
+from src_proj3.utils import save_pickle
 import numpy as np
 import sys
 import pandas as pd
@@ -33,8 +33,8 @@ class DataTransformation:
         
         self.reqd_columns : list = ['month', 'hour', 'dayofweek', 'dayofyear']
         
-        self.root_data_file : str = os.path.join("Project3", "artifacts", "transformed_data")
-        self.root_preprocessor_file : str = os.path.join("Project3", "artifacts", "preprocessor")
+        self.root_data_file : str = os.path.join("artifacts", "transformed_data")
+        self.root_preprocessor_file : str = os.path.join("artifacts", "preprocessor")
         self.train_features_path : str =  os.path.join(self.root_data_file, "train_features.csv")
         self.train_labels_path : str = os.path.join(self.root_data_file, "train_labels.csv")
         self.test_features_path : str = os.path.join(self.root_data_file, "test_features.csv")

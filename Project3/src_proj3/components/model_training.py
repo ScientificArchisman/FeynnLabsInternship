@@ -5,9 +5,9 @@ import sys
 from sklearn.tree import DecisionTreeRegressor, ExtraTreeRegressor
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor
 from xgboost import XGBRegressor
-from src.exception import CustomException
-from src.logger import logging
-from src.utils import  save_pickle
+from src_proj3.exception import CustomException
+from src_proj3.logger import logging
+from src_proj3.utils import  save_pickle
 import optuna
 from sklearn.metrics import  mean_squared_error, mean_absolute_error
 from optuna import Trial
@@ -78,7 +78,7 @@ def objective(trial : Trial):
 class ModelTraining:
     def __init__(self, X_train_path:str, X_test_path:str, 
                    y_train_path:str, y_test_path:str):
-        self.root_model_file = os.path.join("Project3", "artifacts", "model_data")
+        self.root_model_file = os.path.join("artifacts", "model_data")
         self.model_results_file = os.path.join(self.root_model_file, "model_results.csv")
         self.model_file = os.path.join(self.root_model_file, "model.pkl")
         self.tuned_model_file = os.path.join(self.root_model_file, "tuned_model.pkl")
@@ -129,8 +129,8 @@ class ModelTraining:
             logging.error(f"Error saving model results - {e}")
             raise CustomException(e, sys)
         
-        best_model = results.sort_values("RMSE", ascending=False).iloc[0]["Model_specs"]
-        best_model_name = results.sort_values("RMSE", ascending=False).iloc[0]["Model"]
+        best_model = results.sort_values("RMSE", ascending=True).iloc[0]["Model_specs"]
+        best_model_name = results.sort_values("RMSE", ascending=True).iloc[0]["Model"]
         try:
             logging.info(f"Saving the best model = {best_model_name}")    
             save_pickle(best_model, self.model_file)    
